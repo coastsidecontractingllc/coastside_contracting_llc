@@ -90,6 +90,11 @@
     margin-top: 64px;
 }
 
+.galleryContainer {
+    margin-top: 64px;
+    margin-bottom: 32px;
+}
+
 .socialContentGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
