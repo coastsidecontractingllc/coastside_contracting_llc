@@ -1,115 +1,182 @@
-.root {
-
+/* Main container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.collectionContainer {
-    margin-top: 8px;
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #F0F8FF 100%);
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.promotionContainer {
-    position: relative;
+.logoContainer {
+  margin-bottom: 30px;
 }
 
-.promotionContainer h2 {
-    font-size: 52px;
-    line-height: 62px;
+.logo {
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
-
-.messageContainer {
-    text-align: center;
-    padding: 60px 0px;
-    margin: 0px 30px;
+.businessName {
+  font-size: 2.5rem;
+  color: #333333;
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-.messageContainer p {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
+.tagline {
+  font-size: 1.25rem;
+  color: #555555;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
-.gold {
-    color: var(--standard-gold);
+.contactInfo {
+  margin-top: 30px;
 }
 
-.contentTitle{
-    text-align: center;
-    font-weight: normal;
-    font-size: 42px;
-    line-height: 50px;
-    margin-bottom: 16px;
+.phoneButton {
+  background: #555555;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.newArrivalsContainer {
-    margin-top: 64px;
+.phoneButton:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-.highlightContainer {
-    margin: 88px 0px;
+/* Services Section */
+.servicesSection {
+  padding: 60px 0;
+  background: #ffffff;
 }
 
-.linkContainers {
-    display: flex;
-    position: absolute;
-    transform: translate(-50%, 0%);
-    bottom: 64px;
-    left: 50%;
-    gap: 72px;
+.sectionTitle {
+  font-size: 2rem;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
-.ctaCustomButton {
-    margin-top: 50px;
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-.linkContainers a {
-    color: var(--standard-white);
-    border-bottom: 1px solid var(--standard-white);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
+.serviceCard {
+  background: #F8F9FA;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #E9ECEF;
+  transition: all 0.3s ease;
 }
 
-.linkContainers a:hover {
-    color: var(--standard-gold);
-    border-bottom: 1px solid var(--standard-gold);
+.serviceCard:hover {
+  border-color: #87CEEB;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.blogsContainer {
-    margin-top: 96px;
+.serviceCard h3 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-.sustainableContainer {
-    margin: 96px 40px 0px 40px;
+.serviceCard p {
+  color: #666666;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
-.socialContainer {
-    margin-top: 64px;
+/* Contact Section */
+.contactSection {
+  background: #F8F9FA;
+  padding: 60px 0;
 }
 
-.socialContentGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.contactDescription {
+  text-align: center;
+  color: #666666;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
-.socialContentGrid img {
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .heroSection {
+    padding: 40px 0;
+  }
+  
+  .businessName {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+  }
+  
+  .phoneButton {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .serviceCard {
+    padding: 25px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .businessName {
+    font-size: 1.75rem;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  
+  .serviceCard {
+    padding: 20px;
+  }
+  
+  .phoneButton {
     width: 100%;
-    object-fit: cover;
-}
-
-@media (max-width: 800px) {
-    .sustainableContainer {
-        margin: 96px 0px 0px 0px;
-    }
-
-    .socialContentGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .highlightContainer {
-        margin: 88px 0px 40px 0px;
-    }
+    max-width: 300px;
+  }
 }

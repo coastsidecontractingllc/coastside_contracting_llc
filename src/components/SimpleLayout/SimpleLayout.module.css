@@ -1,0 +1,42 @@
+/* Simple Layout Styles */
+.main {
+  min-height: calc(100vh - 120px);
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  background: #333333;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerContent p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.footerContent p:first-child {
+  font-weight: 600;
+  color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footerContent {
+    padding: 0 15px;
+  }
+  
+  .footerContent p {
+    font-size: 0.85rem;
+  }
+}
