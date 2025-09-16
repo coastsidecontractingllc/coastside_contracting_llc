@@ -152,11 +152,6 @@
       margin-bottom: 1rem;
       color: #003366;
     }
-    .modal-box p {
-      font-size: 1.1rem;
-      color: #003366;
-      margin-bottom: 1.2rem;
-    }
     .modal-close {
       position: absolute;
       top: 14px;
@@ -171,6 +166,48 @@
     }
     .modal-close:hover {
       color: #F2635F;
+    }
+    .estimate-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .estimate-form label {
+      text-align: left;
+      font-weight: 600;
+      color: #003366;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .estimate-form input, .estimate-form textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    .estimate-form input[type="submit"] {
+      background: #F2635F;
+      color: #fff;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+    .estimate-form input[type="submit"]:hover {
+      background: #003366;
+      color: #fff;
+    }
+    .form-success {
+      color: #28a745;
+      font-weight: 700;
+      margin-top: 1rem;
     }
     @media (max-width: 600px) {
       .hero h1 {
@@ -206,12 +243,29 @@
     <button id="estimateBtn">Schedule Your Free Estimate</button>
   </section>
 
-  <!-- Modal Popup -->
+  <!-- Modal Popup with Form -->
   <div class="modal-bg" id="estimateModal">
     <div class="modal-box">
       <button class="modal-close" id="closeModalBtn" title="Close">&times;</button>
       <h2>Request a Free Estimate</h2>
-      <p>Thank you for your interest! Please contact us at <a href="mailto:info@coastsidecontractingllc.com" style="color:#F2635F;">Coastside.SWFL@gmail.com</a> or (502) 823-9199.<br><br>Online form coming soon!</p>
+      <form class="estimate-form" id="estimateForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="contact">Contact Info (Email or Phone)</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="datetime">Date/Time Preference</label>
+        <input type="text" id="datetime" name="datetime" placeholder="e.g. Next Tuesday, 2-4pm" required>
+
+        <input type="submit" value="Submit Request">
+      </form>
+      <div class="form-success" id="formSuccess" style="display:none;">
+        Thank you! Your request has been received.
+      </div>
     </div>
   </div>
 
@@ -219,10 +273,15 @@
     const estimateBtn = document.getElementById('estimateBtn');
     const estimateModal = document.getElementById('estimateModal');
     const closeModalBtn = document.getElementById('closeModalBtn');
+    const estimateForm = document.getElementById('estimateForm');
+    const formSuccess = document.getElementById('formSuccess');
 
     // Show the modal
     estimateBtn.addEventListener('click', () => {
       estimateModal.classList.add('active');
+      estimateForm.style.display = 'flex';
+      formSuccess.style.display = 'none';
+      estimateForm.reset();
     });
 
     // Close the modal
@@ -242,6 +301,13 @@
       if (e.key === "Escape") {
         estimateModal.classList.remove('active');
       }
+    });
+
+    // Form "submit" handler (just shows a thank you message for now)
+    estimateForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      estimateForm.style.display = 'none';
+      formSuccess.style.display = 'block';
     });
   </script>
 </body>
