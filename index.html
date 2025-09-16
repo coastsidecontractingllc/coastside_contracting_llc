@@ -67,7 +67,7 @@
       font-family: 'Montserrat', Arial, sans-serif;
     }
     nav a:hover {
-      color: #ffc857;
+      color: #F2635F;
     }
     .hero {
       position: relative;
@@ -80,4 +80,87 @@
       min-height: 400px;
       width: 100vw;
       text-align: center;
-   
+    }
+    .hero h1 {
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 3.3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.28);
+    }
+    .hero p {
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 2.2rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.18);
+      letter-spacing: 0.5px;
+    }
+    .hero button {
+      background: #fff;
+      color: #003366;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.25rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 1px;
+    }
+    .hero button:hover {
+      background: #F2635F; /* Coral Red */
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+      font-size: 1rem;
+      position: relative;
+      z-index: 1;
+      background: rgba(12, 24, 36, 0.55);
+      margin-top: 2rem;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-overlay"></div>
+  <header>
+    <div class="logo">
+      <img src="1 (1).png" alt="Coastside Contracting LLC Logo">
+      <span>Coastside Contracting LLC</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Your Vision, Our Expertise</h1>
+    <p>Simple. Inspired. Beautifully Personalized.</p>
+    <button>Schedule Your Free Estimate</button>
+  </section>
+  <footer>
+    &copy; 2025 Coastside Contracting LLC. All rights reserved.
+  </footer>
+</body>
+</html>
