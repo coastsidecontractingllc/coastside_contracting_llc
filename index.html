@@ -204,11 +204,6 @@
       background: #003366;
       color: #fff;
     }
-    .form-success {
-      color: #28a745;
-      font-weight: 700;
-      margin-top: 1rem;
-    }
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2rem;
@@ -243,12 +238,12 @@
     <button id="estimateBtn">Schedule Your Free Estimate</button>
   </section>
 
-  <!-- Modal Popup with Form -->
+  <!-- Modal Popup with Formspree Form -->
   <div class="modal-bg" id="estimateModal">
     <div class="modal-box">
       <button class="modal-close" id="closeModalBtn" title="Close">&times;</button>
       <h2>Request a Free Estimate</h2>
-      <form class="estimate-form" id="estimateForm">
+      <form class="estimate-form" action="https://formspree.io/f/xovnzbzd" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -263,9 +258,6 @@
 
         <input type="submit" value="Submit Request">
       </form>
-      <div class="form-success" id="formSuccess" style="display:none;">
-        Thank you! Your request has been received.
-      </div>
     </div>
   </div>
 
@@ -273,15 +265,10 @@
     const estimateBtn = document.getElementById('estimateBtn');
     const estimateModal = document.getElementById('estimateModal');
     const closeModalBtn = document.getElementById('closeModalBtn');
-    const estimateForm = document.getElementById('estimateForm');
-    const formSuccess = document.getElementById('formSuccess');
 
     // Show the modal
     estimateBtn.addEventListener('click', () => {
       estimateModal.classList.add('active');
-      estimateForm.style.display = 'flex';
-      formSuccess.style.display = 'none';
-      estimateForm.reset();
     });
 
     // Close the modal
@@ -301,13 +288,6 @@
       if (e.key === "Escape") {
         estimateModal.classList.remove('active');
       }
-    });
-
-    // Form "submit" handler (just shows a thank you message for now)
-    estimateForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      estimateForm.style.display = 'none';
-      formSuccess.style.display = 'block';
     });
   </script>
 </body>
