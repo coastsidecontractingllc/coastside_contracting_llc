@@ -7,33 +7,110 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f6f8fa;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      background: url('openart-kitchen-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(12, 24, 36, 0.55);
+      z-index: 0;
+      pointer-events: none;
     }
     header {
-      background: #003366;
+      position: relative;
+      z-index: 1;
+      background: transparent;
+      padding: 1.5rem 0 0.5rem 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      max-width: 110px;
+      margin-right: 1rem;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.12rem;
+    }
+    nav a {
       color: #fff;
-      padding: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ffc857;
+    }
+    .hero {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 65vh;
+      min-height: 400px;
+      width: 100vw;
       text-align: center;
     }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .hero h1 {
+      color: #fff;
+      font-size: 3rem;
       letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.28);
+      font-weight: 700;
+    }
+    .hero p {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 2.2rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.18);
+    }
+    .hero button {
+      background: #ffc857;
+      color: #003366;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      transition: background 0.2s, color 0.2s;
+    }
+    .hero button:hover {
+      background: #fff;
+      color: #ffc857;
     }
     main {
-      max-width: 700px;
-      margin: 2rem auto;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      z-index: 1;
+      position: relative;
+      background: rgba(255,255,255,0.88);
+      max-width: 800px;
+      margin: -80px auto 2rem auto;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.10);
       padding: 2rem;
-      border-radius: 8px;
+      border-radius: 16px;
     }
-    .contact-section, .gallery-section {
-      margin-bottom: 2rem;
-    }
-    .contact-section h2 {
+    .contact-section h2, .gallery-section h2 {
       color: #003366;
       margin-top: 0;
     }
@@ -56,7 +133,7 @@
       border-radius: 4px;
       resize: vertical;
     }
-    button {
+    button[type="submit"] {
       background: #003366;
       color: #fff;
       border: none;
@@ -66,7 +143,7 @@
       cursor: pointer;
       margin-top: 0.5rem;
     }
-    button:hover {
+    button[type="submit"]:hover {
       background: #00509e;
     }
     .gallery-section h2 {
@@ -84,20 +161,50 @@
     }
     footer {
       text-align: center;
-      color: #666;
-      padding: 1.5rem;
-      font-size: 0.95rem;
+      color: #fff;
+      padding: 2rem;
+      font-size: 1rem;
+      position: relative;
+      z-index: 1;
+      background: rgba(12, 24, 36, 0.55);
+      margin-top: 2rem;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      main {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="bg-overlay"></div>
   <header>
-     <img src="1 (1).png" alt="Coastside Contracting LLC Logo" style="max-width:150px; margin-bottom:1rem;">
-     <h1>Coastside Contracting LLC</h1>
-    <p>Your vision, our expertise</p>
+    <div class="logo">
+      <img src="1 (1).png" alt="Coastside Contracting LLC Logo">
+      <span style="font-size:1.3rem; color:#fff; font-weight:600;">Coastside Contracting LLC</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
+  <section class="hero">
+    <h1>Your Vision, Our Expertise</h1>
+    <p>Simple. Inspired. Beautifully Personalized.</p>
+    <button>Schedule Your Free Estimate</button>
+  </section>
   <main>
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <h2>Contact Us</h2>
       <div class="contact-info">
         <strong>Email:</strong> <a href="mailto:info@coastsidecontractingllc.com">info@coastsidecontractingllc.com</a><br>
@@ -107,21 +214,16 @@
       <form>
         <label for="name">Name</label>
         <input id="name" name="name" type="text" required>
-
         <label for="email">Email</label>
         <input id="email" name="email" type="email" required>
-
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
-
         <button type="submit">Send Message</button>
       </form>
     </section>
-    <section class="gallery-section">
+    <section class="gallery-section" id="gallery">
       <h2>Gallery</h2>
-      <div class="coming-soon">
-        Gallery coming soon!
-      </div>
+      <div class="coming-soon">Gallery coming soon!</div>
     </section>
   </main>
   <footer>
@@ -129,3 +231,5 @@
   </footer>
 </body>
 </html>
+
+/* Note: Ensure the image 'openart-kitchen-bg.jpg' is uploaded to your repo. Use your Key West kitchen image for this file. */
