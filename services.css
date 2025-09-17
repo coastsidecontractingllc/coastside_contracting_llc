@@ -1,60 +1,80 @@
-body {
-  font-family: 'Montserrat', Arial, sans-serif;
-  background: #fff;
+body, html {
+  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.bg-blur {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: url('openart-kitchen-bg.jpg') center center / cover no-repeat;
+  filter: blur(16px) brightness(0.7);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .services-container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 52px auto;
+  padding: 0 24px;
 }
 
 .services-title {
-  font-size: 2.6em;
-  font-weight: 700;
+  font-size: 2.8em;
+  font-weight: 800;
   letter-spacing: 2px;
   text-align: left;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .services-intro {
-  font-size: 1.15em;
-  margin-bottom: 44px;
-  color: #222;
+  font-size: 1.2em;
+  margin-bottom: 48px;
+  color: #fff;
   max-width: 900px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 36px;
 }
 
 .service-item {
-  background: #fafafa;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  background: rgba(25,25,25,0.83);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.15s;
+}
+
+.service-item:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.33);
 }
 
 .service-image {
   width: 100%;
-  height: 220px;
-  background: #d0d0d0 url('https://via.placeholder.com/400x220?text=Service+Image') center center / cover no-repeat;
+  height: 210px;
+  background: #555 url('https://via.placeholder.com/400x210?text=Service+Image') center center / cover no-repeat;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .service-text {
-  font-size: 1.3em;
-  font-weight: 600;
+  font-size: 1.25em;
+  font-weight: 700;
   text-align: center;
-  padding: 22px 10px 28px 10px;
+  padding: 24px 10px 32px 10px;
   letter-spacing: 1px;
-  color: #222;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.21);
 }
