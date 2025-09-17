@@ -2,7 +2,8 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: transparent;
 }
 
 .bg-blur {
@@ -14,12 +15,73 @@ body, html {
   pointer-events: none;
 }
 
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(12, 24, 36, 0.55);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .services-container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 1300px;
   margin: 52px auto;
   padding: 0 24px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  margin: 0 auto 28px auto;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  background: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 110px;
+  margin-right: 1rem;
+  height: auto;
+}
+
+.logo span {
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+nav a:hover {
+  color: #F2635F;
 }
 
 .services-title {
