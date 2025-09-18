@@ -187,3 +187,21 @@ footer {
   color: #fff;
   text-shadow: 0 1px 5px rgba(0,0,0,0.21);
 }
+.service-item:nth-child(1) .service-image {
+  background: #555 url('kitchen.jpg') center center / cover no-repeat;
+}
+.service-item:nth-child(2) .service-image {
+  background: #555 url('bathroom.jpg') center center / cover no-repeat;
+}
+.service-item:nth-child(3) .service-image {
+  background: #555 url('flooring.jpg') center center / cover no-repeat;
+}
+.service-item:nth-child(4) .service-image {
+  background: #555 url('handyman.jpg') center center / cover no-repeat;
+}
+.service-item:nth-child(5) .service-image {
+  background: #555 url('paint.jpg') center center / cover no-repeat;
+}
+.service-item:nth-child(6) .service-image {
+  background: #555 url('rental.jpg') center center / cover no-repeat;
+}
