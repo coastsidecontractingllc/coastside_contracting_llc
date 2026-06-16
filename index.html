@@ -3,8 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Coastside Contracting LLC</title>
+  <title>Home Repair & Remodeling in Cape Coral, Fort Myers & Southwest Florida | Coastside Contracting LLC</title>
+  <meta name="description" content="Coastside Contracting LLC provides handyman services, home repair, bathroom remodeling, kitchen remodeling, floor and tile repair, and rental property maintenance in Cape Coral, Fort Myers, Punta Gorda, Port Charlotte, Estero, Bonita Springs, and Naples.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Coastside Contracting LLC",
+      "url": "https://coastsideswfl.com/",
+      "email": "coastside.swfl@gmail.com",
+      "telephone": "+1-502-823-9199",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cape Coral",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Cape Coral, FL",
+        "Fort Myers, FL",
+        "Punta Gorda, FL",
+        "Port Charlotte, FL",
+        "Estero, FL",
+        "Bonita Springs, FL",
+        "Naples, FL"
+      ],
+      "serviceType": [
+        "Handyman services",
+        "Home repair",
+        "Bathroom remodeling",
+        "Kitchen remodeling",
+        "Floor and tile repair",
+        "Rental property maintenance"
+      ]
+    }
+  </script>
   <style>
     body {
       font-family: 'Montserrat', Arial, sans-serif;
@@ -42,10 +76,14 @@
       align-items: center;
     }
     .logo img {
-      max-width: 110px;
-      margin-right: 1rem;
+      width: clamp(116px, 10.5vw, 156px);
+      max-width: 100%;
+      margin-right: 0;
+      height: auto;
+      display: block;
     }
     .logo span {
+      display: none;
       font-size: 1.25rem;
       color: #fff;
       font-weight: 700;
@@ -83,7 +121,7 @@
     .hero h1 {
       color: #fff;
       font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 3.3rem;
+      font-size: 2.9rem;
       font-weight: 800;
       letter-spacing: 2px;
       margin-bottom: 1rem;
@@ -97,6 +135,13 @@
       margin-bottom: 2.2rem;
       text-shadow: 0 1px 8px rgba(0,0,0,0.18);
       letter-spacing: 0.5px;
+    }
+    .hero .service-area-tagline {
+      font-size: 0.98rem;
+      font-weight: 500;
+      max-width: 900px;
+      margin: -1.1rem auto 2.2rem auto;
+      padding: 0 1.5rem;
     }
     .hero button {
       background: #fff;
@@ -211,6 +256,10 @@
       .hero p {
         font-size: 1rem;
       }
+      .hero .service-area-tagline {
+        font-size: 0.85rem;
+        margin-top: -0.8rem;
+      }
       .modal-box {
         padding: 1.2rem;
       }
@@ -221,19 +270,19 @@
   <div class="bg-overlay"></div>
   <header>
     <div class="logo">
-      <img src="1 (1).png" alt="Coastside Contracting LLC Logo">
+      <img src="coastside-logo-mark.png" alt="Coastside Contracting LLC Logo">
       <span>Coastside Contracting LLC</span>
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
   <section class="hero">
+    <h1>Cape Coral's Trusted Home Repair & Remodeling Experts</h1>
     <p>Redefining paradise, one home at a time.</p>
+    <p class="service-area-tagline">Serving Cape Coral, Fort Myers, Punta Gorda, Port Charlotte, Estero, Bonita Springs, and Naples.</p>
     <button id="estimateBtn">Schedule Your Free Estimate</button>
   </section>
 
