@@ -13,6 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "analytics:install": "node ensure-analytics.js",
+    "sitemap": "node generate-sitemap.js",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
     "plop": "plop"
   },
