@@ -7,8 +7,10 @@
   <meta name="description" content="Coastside Contracting LLC provides Bonita Springs handyman services, home repair, remodeling, floor and tile repair, and rental property maintenance.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project-gallery.css">
   <script src="analytics-config.js" defer></script>
   <script src="analytics.js" defer></script>
+  <script src="project-gallery.js" defer></script>
 </head>
 <body>
   <div class="bg-blur"></div>
@@ -50,28 +52,64 @@
         <p class="project-summary">Recent Bonita Springs home repair, handyman service, remodeling support, floor and tile repair, fixture replacement, and rental property maintenance examples.</p>
         <div class="photo-grid">
           <figure>
-            <img src="images/bathrooms/IMG_3562.jpg" alt="Bonita Springs bathroom remodeling project with shower tile and glass enclosure" loading="lazy" decoding="async">
-            <figcaption>Bathroom remodeling and finish work.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Shower Glass and Tile Detail">
+              <img src="images/bathrooms/IMG_3562.jpg" alt="Shower Glass and Tile Detail for Bonita Springs bathroom remodeling project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Shower Glass and Tile Detail</figcaption>
+            <div class="project-photo-details" id="project-bonita-springs-home-repair-remodeling-1">
+              <h3>Shower Glass and Tile Detail</h3>
+              <p>Bathroom remodeling and finish work. This bathroom remodeling and repair detail fits common shower, tile, fixture, vanity, surface, and finish update needs for Bonita Springs and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/kitchen/IMG_3905.jpg" alt="Bonita Springs kitchen remodeling and home repair project" loading="lazy" decoding="async">
-            <figcaption>Kitchen repair and finish work.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Kitchen Remodeling and Finish Work">
+              <img src="images/kitchen/IMG_3905.jpg" alt="Kitchen Remodeling and Finish Work for Bonita Springs kitchen remodeling project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Kitchen Remodeling and Finish Work</figcaption>
+            <div class="project-photo-details" id="project-bonita-springs-home-repair-remodeling-2">
+              <h3>Kitchen Remodeling and Finish Work</h3>
+              <p>Kitchen repair and finish work. This type of kitchen remodeling and home repair detail fits common cabinet-area, surface, tile, fixture, and finish update needs for Bonita Springs and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/floor-tile-repair/IMG_4372.jpg" alt="Bonita Springs floor and tile repair project with finished tile surface" loading="lazy" decoding="async">
-            <figcaption>Floor and tile repair detail.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Floor and Tile Repair Project">
+              <img src="images/floor-tile-repair/IMG_4372.jpg" alt="Floor and Tile Repair Project for Bonita Springs floor and tile project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Floor and Tile Repair Project</figcaption>
+            <div class="project-photo-details" id="project-bonita-springs-home-repair-remodeling-3">
+              <h3>Floor and Tile Repair Project</h3>
+              <p>Floor and tile repair detail. This floor and tile example fits common tile replacement, flooring repair, grout, transition, subfloor preparation, and durable surface update needs for Bonita Springs and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/handyman/IMG_2429.jpg" alt="Bonita Springs handyman punch-list repair project" loading="lazy" decoding="async">
-            <figcaption>Handyman punch-list repair work.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Realtor Punch-List Repair Example">
+              <img src="images/handyman/IMG_2429.jpg" alt="Realtor Punch-List Repair Example for Bonita Springs handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Realtor Punch-List Repair Example</figcaption>
+            <div class="project-photo-details" id="project-bonita-springs-home-repair-remodeling-4">
+              <h3>Realtor Punch-List Repair Example</h3>
+              <p>Handyman punch-list repair work. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Bonita Springs and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/handyman/IMG_3211.jpg" alt="Bonita Springs interior home repair and maintenance project" loading="lazy" decoding="async">
-            <figcaption>Interior home repair work.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Interior Home Repair and Finish Work">
+              <img src="images/handyman/IMG_3211.jpg" alt="Interior Home Repair and Finish Work for Bonita Springs handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Interior Home Repair and Finish Work</figcaption>
+            <div class="project-photo-details" id="project-bonita-springs-home-repair-remodeling-5">
+              <h3>Interior Home Repair and Finish Work</h3>
+              <p>Interior home repair work. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Bonita Springs and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/rental-maintenance/IMG_4088.jpg" alt="Bonita Springs rental property maintenance and interior repair project" loading="lazy" decoding="async">
-            <figcaption>Rental property maintenance support.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Rental Property Interior Repair">
+              <img src="images/rental-maintenance/IMG_4088.jpg" alt="Rental Property Interior Repair for Bonita Springs rental property maintenance project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Rental Property Interior Repair</figcaption>
+            <div class="project-photo-details" id="project-bonita-springs-home-repair-remodeling-6">
+              <h3>Rental Property Interior Repair</h3>
+              <p>Rental property maintenance support. This visible repair and maintenance example fits common rental property maintenance, turnover repair, and punch-list needs for landlords, Realtors, Airbnb hosts, and property managers in Bonita Springs.</p>
+            </div>
           </figure>
         </div>
       </section>

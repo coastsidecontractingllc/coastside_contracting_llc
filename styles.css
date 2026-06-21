@@ -344,6 +344,10 @@ footer {
   margin-bottom: 1.5rem !important;
 }
 
+.project-summary-after {
+  margin: 1.5rem auto 0 auto !important;
+}
+
 .project-summary code {
   color: #fff;
   font-family: 'Montserrat', Arial, sans-serif;

@@ -7,8 +7,10 @@
   <meta name="description" content="Handyman and home repair services in Cape Coral, Fort Myers, Punta Gorda, Port Charlotte, Estero, Bonita Springs, and Naples, including drywall repair, interior painting, fixtures, doors, cabinets, TV mounting, shelving, rental repairs, and punch-list maintenance.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="project-gallery.css">
   <script src="analytics-config.js" defer></script>
   <script src="analytics.js" defer></script>
+  <script src="project-gallery.js" defer></script>
 </head>
 <body>
   <div class="bg-blur"></div>
@@ -58,33 +60,69 @@
 
       <section class="landing-section">
         <h2>Project Photos</h2>
-        <p class="project-summary">See examples of Cape Coral handyman services, home repair, drywall touch-ups, fixture replacement, punch-list work, and general maintenance completed for Southwest Florida homeowners and rental properties.</p>
         <div class="photo-grid">
           <figure>
-            <img src="images/handyman/IMG_0963.jpg" alt="Handyman repair project in Cape Coral with interior finish work" loading="lazy" decoding="async">
-            <figcaption>Interior repair and finish work for a cleaner living space.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Interior Home Repair and Finish Work">
+              <img src="images/handyman/IMG_0963.jpg" alt="Interior Home Repair and Finish Work for Cape Coral handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Interior Home Repair and Finish Work</figcaption>
+            <div class="project-photo-details" id="project-handyman-services-cape-coral-1">
+              <h3>Interior Home Repair and Finish Work</h3>
+              <p>Interior repair and finish work for a cleaner living space. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Cape Coral and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/handyman/IMG_0964%20(1).jpg" alt="Cape Coral handyman project with household repair detail" loading="lazy" decoding="async">
-            <figcaption>Small household repair completed with attention to detail.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for General Handyman Repair Example">
+              <img src="images/handyman/IMG_0964%20(1).jpg" alt="General Handyman Repair Example for Cape Coral handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>General Handyman Repair Example</figcaption>
+            <div class="project-photo-details" id="project-handyman-services-cape-coral-2">
+              <h3>General Handyman Repair Example</h3>
+              <p>Small household repair completed with attention to detail. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Cape Coral and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/handyman/IMG_2324.jpg" alt="Handyman maintenance work for a Southwest Florida property" loading="lazy" decoding="async">
-            <figcaption>Maintenance work for a Southwest Florida property.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Property Maintenance and Home Repair Project">
+              <img src="images/handyman/IMG_2324.jpg" alt="Property Maintenance and Home Repair Project for Cape Coral handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Property Maintenance and Home Repair Project</figcaption>
+            <div class="project-photo-details" id="project-handyman-services-cape-coral-3">
+              <h3>Property Maintenance and Home Repair Project</h3>
+              <p>Maintenance work for a Southwest Florida property. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Cape Coral and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/handyman/IMG_2429.jpg" alt="Cape Coral home repair and punch-list project" loading="lazy" decoding="async">
-            <figcaption>Punch-list repair work handled before the next project phase.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Realtor Punch-List Repair Example">
+              <img src="images/handyman/IMG_2429.jpg" alt="Realtor Punch-List Repair Example for Cape Coral handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Realtor Punch-List Repair Example</figcaption>
+            <div class="project-photo-details" id="project-handyman-services-cape-coral-4">
+              <h3>Realtor Punch-List Repair Example</h3>
+              <p>Punch-list repair work handled before the next project phase. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Cape Coral and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/handyman/IMG_2499.jpg" alt="General handyman repair by Coastside Contracting LLC" loading="lazy" decoding="async">
-            <figcaption>General handyman repair for a clean, finished result.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for General Handyman Repair Example">
+              <img src="images/handyman/IMG_2499.jpg" alt="General Handyman Repair Example for Cape Coral handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>General Handyman Repair Example</figcaption>
+            <div class="project-photo-details" id="project-handyman-services-cape-coral-5">
+              <h3>General Handyman Repair Example</h3>
+              <p>General handyman repair for a clean, finished result. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Cape Coral and Southwest Florida homes.</p>
+            </div>
           </figure>
           <figure>
-            <img src="images/handyman/IMG_3211.jpg" alt="Interior home repair project in Cape Coral by Coastside Contracting LLC" loading="lazy" decoding="async">
-            <figcaption>Interior repair work completed for better everyday function.</figcaption>
+            <button class="project-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="project-gallery-modal" aria-label="Open project details for Interior Home Repair and Finish Work">
+              <img src="images/handyman/IMG_3211.jpg" alt="Interior Home Repair and Finish Work for Cape Coral handyman and home repair project" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Interior Home Repair and Finish Work</figcaption>
+            <div class="project-photo-details" id="project-handyman-services-cape-coral-6">
+              <h3>Interior Home Repair and Finish Work</h3>
+              <p>Interior repair work completed for better everyday function. This type of handyman and home repair project fits common drywall, fixture, interior repair, punch-list, and general maintenance needs for Cape Coral and Southwest Florida homes.</p>
+            </div>
           </figure>
         </div>
+        <p class="project-summary project-summary-after">These Cape Coral handyman project photos show the practical home repair work Coastside Contracting LLC handles for homeowners, rental owners, and property managers. From drywall repair and texture matching to fixture replacement, door repairs, inspection punch lists, and rental turnover work, our goal is to keep Southwest Florida properties clean, functional, and ready to use.</p>
       </section>
 
       <section class="landing-section">

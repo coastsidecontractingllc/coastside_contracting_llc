@@ -1,0 +1,129 @@
+.project-photo-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.project-photo-trigger:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.project-photo-trigger img {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-photo-trigger:hover img,
+.project-photo-trigger:focus-visible img {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.36);
+}
+
+.project-photo-details {
+  display: none;
+}
+
+.project-gallery-modal[hidden] {
+  display: none;
+}
+
+.project-gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(5, 10, 16, 0.78);
+}
+
+.project-gallery-dialog {
+  position: relative;
+  width: min(980px, 100%);
+  max-height: min(90vh, 900px);
+  overflow: auto;
+  background: rgba(25, 25, 25, 0.96);
+  border-radius: 16px;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.45);
+  color: #fff;
+}
+
+.project-gallery-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.94);
+  color: #0b315d;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.project-gallery-close:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.project-gallery-media {
+  background: rgba(12, 24, 36, 0.9);
+}
+
+.project-gallery-media img {
+  display: block;
+  width: 100%;
+  max-height: 62vh;
+  object-fit: contain;
+}
+
+.project-gallery-copy {
+  padding: 28px;
+}
+
+.project-gallery-copy h3 {
+  margin: 0 0 12px 0;
+  color: #fff;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.project-gallery-copy p {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+body.project-gallery-open {
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .project-gallery-modal {
+    padding: 14px;
+    align-items: flex-start;
+  }
+
+  .project-gallery-dialog {
+    max-height: calc(100vh - 28px);
+  }
+
+  .project-gallery-media img {
+    max-height: 52vh;
+  }
+
+  .project-gallery-copy {
+    padding: 22px;
+  }
+}
