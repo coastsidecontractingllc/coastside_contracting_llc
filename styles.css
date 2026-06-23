@@ -305,6 +305,46 @@ footer {
   text-shadow: 0 2px 12px rgba(0,0,0,0.28);
 }
 
+.landing-section h3 {
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 800;
+  margin: 1.35rem 0 0.45rem 0;
+}
+
+.landing-section h3:first-child {
+  margin-top: 0;
+}
+
+.landing-section h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.landing-section h3 a:hover {
+  color: #F2635F;
+}
+
+.landing-copy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 32px;
+}
+
+.landing-copy-grid p,
+.faq-list p {
+  max-width: none;
+}
+
+.faq-list {
+  display: grid;
+  gap: 20px;
+}
+
+.faq-list h3 {
+  margin-bottom: 0.35rem;
+}
+
 .service-list {
   color: #fff;
   display: grid;
@@ -442,7 +482,8 @@ footer {
   }
 
   .service-list,
-  .photo-grid {
+  .photo-grid,
+  .landing-copy-grid {
     grid-template-columns: 1fr;
   }
 
