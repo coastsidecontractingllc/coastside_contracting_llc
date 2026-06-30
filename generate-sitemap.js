@@ -24,6 +24,8 @@ const locFor = (file) => {
 const pages = fs.readdirSync(ROOT)
   .filter((file) => file.endsWith('.html'))
   .filter((file) => !file.startsWith('.'))
+  .filter((file) => file !== 'cape-coral-handyman-services.html')
+  .filter((file) => file !== 'cape-coral-rental-property-maintenance.html')
   .sort((a, b) => {
     const order = ['index.html', 'services.html', 'contact.html'];
     const aIndex = order.indexOf(a);
