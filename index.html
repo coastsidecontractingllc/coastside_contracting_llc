@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Home Repair & Remodeling in Cape Coral, Fort Myers & Southwest Florida | Coastside Contracting LLC</title>
-  <meta name="description" content="Coastside Contracting LLC provides handyman services, home repair, bathroom remodeling, kitchen remodeling, floor and tile repair, and rental property maintenance in Cape Coral, Fort Myers, Punta Gorda, Port Charlotte, Estero, Bonita Springs, and Naples.">
+  <title>Southwest Florida Handyman, Home Repair & Rental Maintenance | Coastside Contracting LLC</title>
+  <meta name="description" content="Coastside Contracting LLC provides handyman services, home repair, rental property maintenance, Airbnb maintenance, Realtor punch-list repairs, property manager maintenance, and remodeling support across Southwest Florida.">
+  <link rel="canonical" href="https://coastsideswfl.com/">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
   <script type="application/ld+json">
     {
@@ -35,7 +36,10 @@
         "Bathroom remodeling",
         "Kitchen remodeling",
         "Floor and tile repair",
-        "Rental property maintenance"
+        "Rental property maintenance",
+        "Airbnb maintenance",
+        "Realtor punch-list repairs",
+        "Property manager maintenance"
       ]
     }
   </script>
@@ -161,6 +165,58 @@
       background: #F2635F;
       color: #fff;
     }
+    .home-focus {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, calc(100% - 48px));
+      margin: -1.5rem auto 3rem auto;
+      color: #fff;
+    }
+    .home-focus h2 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin: 0 0 1rem 0;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.28);
+    }
+    .home-focus p {
+      font-size: 1.06rem;
+      line-height: 1.65;
+      margin: 0 0 1.2rem 0;
+      max-width: 920px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.18);
+    }
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .focus-card {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(25,25,25,0.76);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      padding: 1.25rem;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .focus-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(242,99,95,0.75);
+    }
+    .focus-card strong {
+      display: block;
+      font-size: 1.08rem;
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.4px;
+    }
+    .focus-card span {
+      display: block;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
 
     /* Modal Styles */
     .modal-bg {
@@ -263,6 +319,13 @@
       .modal-box {
         padding: 1.2rem;
       }
+      .home-focus {
+        width: calc(100% - 32px);
+        margin-top: 0;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
   <script src="analytics-config.js" defer></script>
@@ -282,10 +345,33 @@
     </nav>
   </header>
   <section class="hero">
-    <h1>Cape Coral's Trusted Home Repair & Remodeling Experts</h1>
+    <h1>Southwest Florida Handyman, Home Repair & Rental Maintenance</h1>
     <p>Redefining paradise, one home at a time.</p>
     <p class="service-area-tagline">Serving Cape Coral, Fort Myers, Punta Gorda, Port Charlotte, Estero, Bonita Springs, and Naples.</p>
     <button id="estimateBtn">Schedule Your Free Estimate</button>
+  </section>
+
+  <section class="home-focus" aria-labelledby="home-core-services">
+    <h2 id="home-core-services">Core Services</h2>
+    <p>Coastside Contracting LLC focuses on practical home repair, handyman services, rental property maintenance, Airbnb maintenance, Realtor punch-list repairs, and property manager maintenance across Southwest Florida.</p>
+    <div class="focus-grid">
+      <a class="focus-card" href="southwest-florida-handyman-services.html">
+        <strong>Southwest Florida Handyman Services</strong>
+        <span>Drywall repair, fixture replacement, ceiling fans, door repair, trim work, inspection repair items, and general home maintenance.</span>
+      </a>
+      <a class="focus-card" href="rental-property-maintenance-airbnb-services.html">
+        <strong>Rental, Airbnb & Realtor Repairs</strong>
+        <span>Rental turnover repairs, Airbnb maintenance, property manager repair lists, Realtor punch-list work, and guest-ready maintenance.</span>
+      </a>
+      <a class="focus-card" href="handyman-services-cape-coral.html">
+        <strong>Cape Coral Handyman Services</strong>
+        <span>Home repair and maintenance for Cape Coral homeowners, Realtors, landlords, rental owners, and property managers.</span>
+      </a>
+      <a class="focus-card" href="rental-property-maintenance-cape-coral.html">
+        <strong>Cape Coral Rental Property Maintenance</strong>
+        <span>Rental maintenance, inspection repairs, move-in and move-out repairs, Airbnb upkeep, and landlord repair support.</span>
+      </a>
+    </div>
   </section>
 
   <!-- Modal Popup with Formspree Form -->
