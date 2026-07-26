@@ -515,7 +515,8 @@ footer {
   margin-top: 1.25rem;
 }
 
-.city-links a {
+.city-links a,
+.city-links span {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -523,6 +524,10 @@ footer {
   border: 1px solid rgba(255,255,255,0.35);
   border-radius: 50px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.city-links span {
+  opacity: 0.82;
 }
 
 .city-links a:hover {

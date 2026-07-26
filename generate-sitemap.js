@@ -29,6 +29,9 @@ const pages = fs.readdirSync(ROOT)
   .filter((file) => file !== 'handyman-cape-coral.html')
   .filter((file) => file !== 'cape-coral-handyman-services.html')
   .filter((file) => file !== 'cape-coral-rental-property-maintenance.html')
+  .filter((file) => file !== 'cape-coral-bathroom-remodeling.html')
+  .filter((file) => file !== 'cape-coral-kitchen-remodeling.html')
+  .filter((file) => !file.includes('home-repair-remodeling'))
   .sort((a, b) => {
     const order = ['index.html', 'services.html', 'contact.html'];
     const aIndex = order.indexOf(a);
